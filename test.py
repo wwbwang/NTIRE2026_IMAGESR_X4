@@ -21,8 +21,12 @@ def select_model(args, device):
         name = f"{model_id:02}_DAT_baseline"
         model_path = os.path.join('model_zoo', 'team00_dat.pth')
         model_func = DAT
-    else:
-        raise NotImplementedError(f"Model {model_id} is not implemented.")
+    elif model_id == 17:
+        # Model 17 implementation
+        from models.team17_RandomSeed42.model import main as RandomSeed42
+        name = f"{model_id:02}_RandomSeed42"
+        model_path = os.path.join('model_zoo', 'team17_RandomSeed42')
+        model_func = RandomSeed42
 
     return model_func, model_path, name
 
@@ -51,8 +55,8 @@ def run(model_func, model_name, model_path, device, args, mode="test"):
 
 
 def main(args):
-    utils_logger.logger_info("NTIRE2025-ImageSRx4", log_path="NTIRE2025-ImageSRx4.log")
-    logger = logging.getLogger("NTIRE2025-ImageSRx4")
+    utils_logger.logger_info("NTIRE2026-ImageSRx4", log_path="NTIRE2026-ImageSRx4.log")
+    logger = logging.getLogger("NTIRE2026-ImageSRx4")
 
     # --------------------------------
     # basic settings
@@ -83,11 +87,11 @@ def main(args):
         run(model_func, model_name, model_path, device, args, mode="test")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser("NTIRE2025-ImageSRx4")
+    parser = argparse.ArgumentParser("NTIRE2026-ImageSRx4")
     parser.add_argument("--valid_dir", default=None, type=str, help="Path to the validation set")
     parser.add_argument("--test_dir", default=None, type=str, help="Path to the test set")
-    parser.add_argument("--save_dir", default="NTIRE2025-ImageSRx4/results", type=str)
-    parser.add_argument("--model_id", default=0, type=int)
+    parser.add_argument("--save_dir", default="results", type=str)
+    parser.add_argument("--model_id", default=17, type=int)
 
     args = parser.parse_args()
     pprint(args)

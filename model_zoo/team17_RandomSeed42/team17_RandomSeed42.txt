@@ -1,0 +1,42 @@
+Please organize the submitted model files under `team17_RandomSeed42/` exactly as follows.
+
+Download link: https://pan.baidu.com/s/1cUSmu2the4A0L93bN7C3yA (Access code: SRSR)
+
+File tree:
+|-- team17_RandomSeed42
+|   |-- hypir_sd21.pth
+|   |-- mambair_v2.pth
+|   |-- stable-diffusion-2-1-base
+|   |   |-- scheduler
+|   |   |   `-- scheduler_config.json
+|   |   |-- text_encoder
+|   |   |   |-- config.json
+|   |   |   |-- model.fp16.safetensors
+|   |   |   |-- model.safetensors
+|   |   |   |-- pytorch_model.bin
+|   |   |   `-- pytorch_model.fp16.bin
+|   |   |-- tokenizer
+|   |   |   |-- merges.txt
+|   |   |   |-- special_tokens_map.json
+|   |   |   |-- tokenizer_config.json
+|   |   |   `-- vocab.json
+|   |   |-- unet
+|   |   |   |-- config.json
+|   |   |   |-- diffusion_pytorch_model.bin
+|   |   |   |-- diffusion_pytorch_model.fp16.bin
+|   |   |   |-- diffusion_pytorch_model.fp16.safetensors
+|   |   |   `-- diffusion_pytorch_model.safetensors
+|   |   `-- vae
+|   |       |-- config.json
+|   |       |-- diffusion_pytorch_model.bin
+|   |       |-- diffusion_pytorch_model.fp16.bin
+|   |       |-- diffusion_pytorch_model.fp16.safetensors
+|   |       `-- diffusion_pytorch_model.safetensors
+|   `-- text_folder(optioal)
+|   |       `-- 0901x4.txt
+|   |       `-- 0902x4.txt
+|   |       `--   .
+|   |       `--   .
+|   |       `--   .
+|   |       `-- 1000x4.txt
+|   `-- team17_RandomSeed42.txt
